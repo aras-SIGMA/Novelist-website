@@ -19,22 +19,94 @@
     <div
       class="relative w-full bg-top bg-no-repeat flex flex-col"
       style="
-        background-image: url(&quot;../asset/images/Background.jpg&quot;);
+        background-image: url('../asset/images/Background.jpg');
         min-height: 150vh;
         background-size: cover;
       "
     >
-      <!-- Tengah: Judul + Persegi Panjang -->
+      <!-- Header -->
+      <div
+        class="absolute top-0 left-0 right-0 flex justify-between items-center p-4 z-10"
+      >
+        <div></div>
+        <div class="text-white text-sm mt-[15px] mr-[15px]">
+          <a href="./sign-in.html" class="hover:underline text-[20px]">Sign In</a> /
+          <a href="./sign-up.html" class="hover:underline text-[20px]">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- Judul -->
       <div class="flex flex-col items-center justify-center grow py-10">
-        <h1 class="text-white text-[63px] font-semibold">Novelist</h1>
-        <h2 class="text-white text-[30px] font-medium mt-">
+        <h1
+          class="text-white text-[63px] font-semibold flex items-center gap-4"
+        >
+          <img
+            src="../asset/images/Logo.png"
+            alt="Novelist Logo"
+            class="h-16 w-auto"
+          />
+          Novelist
+        </h1>
+        <h2 class="text-white text-[20px] font-medium mt-2">
           Start your reading journey with Novelist
         </h2>
 
-        <!-- Persegi Panjang -->
+        <!-- Card -->
         <div
-          class="w-full max-w-3xl h-[650px] bg-[#252525] rounded-xl mt-10 shadow-2xl"
-        ></div>
+          class="w-full max-w-[670px] h-[690px] bg-[#252525] rounded-xl mt-10 shadow-2xl flex flex-col justify-between px-10 py-10"
+        >
+          <div class="flex flex-col gap-8">
+            <div>
+              <h3 class="text-white text-xl font-bold mb-3">Smart Features</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                We offer a smart convenient sync feature that allows you to
+                access your content both on your PC and mobile devices. No
+                matter where you are, you can pick where you left off, making
+                reading novel more enjoyable.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-white text-xl font-bold mb-3">
+                Hundreds of Collection
+              </h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Dive into a growing library of over 100 carefully curated global
+                novels, featuring timeless European classics from legendary
+                authors like George Orwell, Franz Kafka, Jane Austen, Fyodor
+                Dostoevsky, and more. From dystopian masterpieces and
+                existential tales to timeless romances and thought-provoking
+                literature, Novelist brings the world's most celebrated stories
+                straight to your screen - all beautifully formatted and ready to
+                immerse you in hours of captivating reading.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-white text-xl font-bold mb-3">Complete genre</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Whatever mood you're in, Novelist has the perfect story waiting.
+                Lose yourself in heart-pounding romance, edge-of-your-seat
+                mystery and thriller, epic fantasy worlds, dark paranormal
+                tales, steamy CEO dramas, intense cultivation adventures, or
+                light-hearted slice-of-life - and everything in between. With
+                fresh releases added daily and thousands of chapters across
+                every popular genre, there's always something new to discover
+                and fall in love with.
+              </p>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="flex justify-center mt-6">
+            <a
+              href="./homepage.html"
+              class="bg-[#7B3FF2] hover:bg-[#6530D4] text-white font-semibold text-base px-10 py-3 rounded-lg transition-colors duration-200"
+            >
+              Go to Homepage >
+            </a>
+          </div>
+        </div>
       </div>
 
       <!-- Footer -->
@@ -42,7 +114,7 @@
         class="w-full h-16 bg-black mt-auto flex items-center justify-center"
       >
         <p class="text-white text-sm">
-          © 2026 Novelist Website - Tugas Sekolah
+          © 2026 Novelist by ReadComp. All rights reserved.
         </p>
       </div>
     </div>
