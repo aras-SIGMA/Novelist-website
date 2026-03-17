@@ -1,11 +1,50 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
- 
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novelist Website</title>
+
+    <link href="./output.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="font-['Montserrat']">
+    <div
+      class="relative w-full bg-top bg-no-repeat flex flex-col"
+      style="
+        background-image: url(&quot;../asset/images/Background.jpg&quot;);
+        min-height: 150vh;
+        background-size: cover;
+      "
+    >
+      <!-- Tengah: Judul + Persegi Panjang -->
+      <div class="flex flex-col items-center justify-center grow py-10">
+        <h1 class="text-white text-[63px] font-semibold">Novelist</h1>
+        <h2 class="text-white text-[30px] font-medium mt-">
+          Start your reading journey with Novelist
+        </h2>
+
+        <!-- Persegi Panjang -->
+        <div
+          class="w-full max-w-3xl h-[650px] bg-[#252525] rounded-xl mt-10 shadow-2xl"
+        ></div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        class="w-full h-16 bg-black mt-auto flex items-center justify-center"
+      >
+        <p class="text-white text-sm">
+          © 2026 Novelist Website - Tugas Sekolah
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
