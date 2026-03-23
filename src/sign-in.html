@@ -15,64 +15,103 @@
     />
   </head>
 
-  <body class="font-['Montserrat']">
+  <body class="font-['Montserrat'] text-white bg-[#1a1a1c]">
     <div
-      class="relative w-full min-h-screen bg-cover bg-top bg-no-repeat flex flex-col bg-[url('../asset/images/bgLogin.jpg')]"
+      class="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center px-8 md:px-20 lg:px-32 bg-[url('../asset/images/bgLogin.jpg')]"
     >
-      <div class="ml-20 mt-8 gap-4 flex flex-col">
-        <p class="text-purple-500 font-bold text-2xl pb-2">Novelist</p>
-        <p class="text-white font-bold text-3xl">Hello!</p>
-        <p class="text-white font-bold text-3xl">
-          Welcome Back,
-          <span class="text-purple-500 font-bold text-3xl">reader</span>
+      <div class="w-full max-w-md">
+        <div class="flex flex-col mb-10">
+          <p
+            class="text-[#a855f7] font-bold text-xl tracking-widest uppercase mb-2"
+          >
+            Novelist
+          </p>
+          <h1 class="text-white font-extrabold text-4xl mb-1">Hello!</h1>
+          <h2 class="text-white font-bold text-3xl tracking-wide">
+            Welcome Back, <span class="text-[#a855f7]">Reader</span>
+          </h2>
+        </div>
+
+        <form>
+          <div class="space-y-5">
+            <div>
+              <label class="block font-bold text-sm mb-2">Email</label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full bg-[#1c1c1e]/80 border border-neutral-600 rounded-lg px-4 py-3 text-sm focus:border-[#a855f7] outline-none transition-all"
+              />
+            </div>
+
+            <div>
+              <label class="block font-bold text-sm mb-2">Password</label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                class="w-full bg-[#1c1c1e]/80 border border-neutral-600 rounded-lg px-4 py-3 text-sm focus:border-[#a855f7] outline-none transition-all"
+              />
+            </div>
+          </div>
+
+          <div class="mt-3 mb-8">
+            <a
+              href="#"
+              class="text-blue-500 text-sm font-semibold hover:underline"
+              >Forgot Password?</a
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 bg-[#8b5cf6] rounded-lg text-white font-bold hover:bg-[#7c3aed] transition-all shadow-lg"
+          >
+            Login
+          </button>
+        </form>
+
+        <div class="flex items-center my-8">
+          <div class="flex-grow border-t border-neutral-700"></div>
+          <span class="px-4 text-sm font-bold text-neutral-400">Or</span>
+          <div class="flex-grow border-t border-neutral-700"></div>
+        </div>
+
+        <div class="flex gap-4 mb-8">
+          <button
+            class="flex-1 bg-[#1c1c1e] border border-neutral-600 rounded-lg py-2.5 flex justify-center items-center hover:bg-neutral-800 transition-all"
+          >
+            <img
+              src="../asset/images/twitter.png"
+              alt="Twitter"
+              class="h-5 w-auto object-contain"
+            />
+          </button>
+
+          <button
+            class="flex-1 bg-[#1c1c1e] border border-neutral-600 rounded-lg py-2.5 flex justify-center items-center hover:bg-neutral-800 transition-all"
+          >
+            <img
+              src="../asset/images/google.png"
+              alt="Google"
+              class="h-5 w-auto object-contain"
+            />
+          </button>
+
+          <button
+            class="flex-1 bg-[#1c1c1e] border border-neutral-600 rounded-lg py-2.5 flex justify-center items-center hover:bg-neutral-800 transition-all"
+          >
+            <img
+              src="../asset/images/apple-logo.png"
+              alt="Apple"
+              class="h-5 w-auto object-contain"
+            />
+          </button>
+        </div>
+
+        <p class="text-center text-sm font-bold">
+          Don't have an account yet?
+          <a href="#" class="text-blue-500 hover:underline">Register</a>
         </p>
       </div>
-
-      <!-- Input -->
-      <div class="ml-20 mt-8">
-        <div class="pb-6">
-          <p class="text-white font-bold text-sm pb-4">Email</p>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            class="bg-black w-150 border border-neutral-300 rounded-lg placeholder-neutral-300 h-13"
-          />
-        </div>
-
-        <div class="pb-6">
-          <p class="text-white font-bold text-sm pb-4">Password</p>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            class="bg-black w-150 border border-neutral-300 rounded-lg placeholder-neutral-300 h-13"
-          />
-        </div>
-
-        <!-- Forgot Password -->
-        <a
-          href="#"
-          class="text-purple-500 text-sm font-semibold mb-6 hover:text-purple-400"
-        >
-          Forgot Password?
-        </a>
-      </div>
-
-      <!-- Button -->
-      <div class="ml-20 mt-2">
-        <a
-          href="./homepage.html"
-          class="flex justify-center items-center w-150 h-13 bg-[#7B3FF2] rounded-lg text-white font-bold text-base hover:bg-purple-600 transition-colors"
-        >
-          Login
-        </a>
-      </div>
-
-      <div class=" ml-40 mt-2">
-        <p class="text-white font-semibold">Or</p>
-      </div>
-
-      <!-- Kanan: Kosong (background icon tampil dari bgLogin.jpg) -->
-      <div class="flex-1"></div>
     </div>
   </body>
 </html>
