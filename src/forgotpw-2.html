@@ -54,22 +54,19 @@
     </div>
 
 <script>
-        // --- LOGIKA UNTUK INPUT OTP ---
+        // --- OTP ---
         const inputs = document.querySelectorAll('#otp-inputs input');
 
         inputs.forEach((input, index) => {
-            // Membatasi input hanya 1 angka
             input.addEventListener('input', function(e) {
                 if (this.value.length > 1) {
                     this.value = this.value.slice(0, 1);
                 }
-                // Pindah ke input berikutnya jika sudah diisi
                 if (this.value.length === 1 && index < inputs.length - 1) {
                     inputs[index + 1].focus();
                 }
             });
 
-            // Pindah ke input sebelumnya jika menekan backspace pada input yang kosong
             input.addEventListener('keydown', function(e) {
                 if (e.key === 'Backspace' && this.value === '' && index > 0) {
                     inputs[index - 1].focus();
@@ -77,51 +74,47 @@
             });
         });
 
-        // Fokus pada input pertama saat halaman dimuat
         window.onload = () => inputs[0].focus();
 
 
-        // --- LOGIKA UNTUK TIMER ---
+        // --- TIMER ---
         const timerDisplay = document.getElementById('timer');
         const resendBtn = document.getElementById('resend-btn');
-        let timeLeft = 300; // 5 menit dalam detik (5 * 60)
+        let timeLeft = 300;
         let timerInterval;
 
         function startTimer() {
-            resendBtn.disabled = true; // Nonaktifkan tombol resend saat timer berjalan
+            resendBtn.disabled = true;
             
             timerInterval = setInterval(() => {
                 const minutes = Math.floor(timeLeft / 60);
                 const seconds = timeLeft % 60;
 
-                // Format tampilan agar selalu 2 digit (misal: 05:09)
                 const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
                 timerDisplay.textContent = formattedTime;
 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     timerDisplay.textContent = "00:00";
-                    resendBtn.disabled = false; // Aktifkan tombol resend jika waktu habis
+                    resendBtn.disabled = false;
                 } else {
                     timeLeft--;
                 }
-            }, 1000); // Update setiap 1000ms (1 detik)
+            }, 1000);
         }
 
-        // Mulai timer pertama kali
+        // Mulai timer
         startTimer();
 
-        // Logika ketika tombol Resend diklik
+        // Tombol Resend
         resendBtn.addEventListener('click', () => {
             if(!resendBtn.disabled) {
-                timeLeft = 300; // Reset ke 5 menit
+                timeLeft = 300;
                 startTimer();
                 
-                // Kosongkan inputan
                 inputs.forEach(input => input.value = '');
                 inputs[0].focus();
                 
-                // Disini kamu bisa menambahkan logika untuk memanggil API pengiriman ulang kode
                 console.log("Kode OTP dikirim ulang!");
             }
         });
